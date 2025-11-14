@@ -105,4 +105,45 @@ void affichage_plateau(char plat[HAUTEUR][LARGEUR])
 
 
 
+// pour effectuer le déplacement du joueur 
+void deplacer_joueur (char grille[HAUTEUR][LARGEUR]){
+    int curseur_x = 0; //déclaration de variabless 
+    int curseur_y = 0;
+    char touche;
+    int x_selection, y_selection;
+    
+    while(1){
+        system("cls");
 
+        affichage_plateau(grille);// ici on apelle la fonction qui fait la grille 
+
+        // on va afficher le curseur par dessus 
+        gotoligcol(curseur_y,curseur_x);
+        printf("[X]"); //surligner l'element 
+        
+        gotoligcol(26,0);
+        printf("position : %d, %d -ZQSD - ECHAP=QUITTER", curseur_x,curseur_y);
+
+        //on passe au déplacement 
+        touche = _getch(); //pareil que le getchar mais dans conio.h 
+        if(touche == 'z' && curseur_y>0){
+            curseur_y--;
+        }
+        else if(touche == 's'&& curseur_y<24){ // on a mis des conditoins pour  éviter de sortir de la grille 
+            curseur_y++;
+        }
+        else if(touche == 'q'&& curseur_x>0){
+            curseur_x--;
+        }
+        else if(touche == 'd' && curseur_x<44){
+            curseur_x++;
+        }
+        else if(touche == 27){
+            break;
+        }
+
+
+    }
+
+    
+}
