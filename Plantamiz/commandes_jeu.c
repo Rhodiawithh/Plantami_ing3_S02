@@ -15,20 +15,6 @@ void pause_jeu(){
 }
 
 
-// Déplacer le joueur selon la touche appuyée
-void deplacer_joueur(char touche, int *x, int *y) {
-    switch(touche) {
-        case 'z': *y=(*y)-1;
-        break;
-        case 's': *y=(*y)+1;
-        break;
-        case 'q': *x=(*x)-1;
-        break;
-        case 'd': *x=(*x)+1;
-        break;
-        }
-}
-
 //Sélection d'un item
 void selection_item(int* select_item, int* select_item_x, int* select_item_y, int* x_joueur, int* y_joueur, char grille[HAUTEUR][LARGEUR]){
     

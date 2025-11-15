@@ -7,8 +7,6 @@
 //Mettre le jeu en pause
 void pause_jeu();
 
-// Déplacer le joueur selon la touche appuyée ('z', 's', 'q', 'd')
-void deplacer_joueur(char touche, int *x, int *y);
 
 //Afficher où se trouve le joueur PAS FINI
 
