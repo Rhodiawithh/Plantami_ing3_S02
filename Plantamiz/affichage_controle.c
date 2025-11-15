@@ -1,3 +1,5 @@
+#include <windows.h>
+#include <conio.h>
 #include "Plantamiz.h"
 
 //variables globales statiques, utilisables par tous les sous-programmes du fichier
